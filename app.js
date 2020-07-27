@@ -30,9 +30,10 @@ function getPost() {
 function addPost(e) {
   e.preventDefault();
 
-  let title = document.querySelector("#title");
-  let body = document.querySelector("#body");
+  let title = document.querySelector("#title").value;
+  let body = document.querySelector("#body").value;
 
+  console.log(title);
   fetch("http://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     headers: {
